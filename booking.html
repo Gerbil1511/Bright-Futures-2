@@ -85,13 +85,18 @@
 
     <main id="main-content">
         <!-- Booking Hero Section -->
-<section id="booking-hero" class="d-flex align-items-center">
-    <div id="cover-text" class="container text-center" data-aos="fade-up">
-        <h1 class="display-3 fw-bold mb-4">Book a <span class="gradient-text">Diversity Talk</span></h1>
-        <p class="lead mb-5 fs-3"><strong>Bring our interactive diversity and inclusion program to your school or organization.</strong></p>
-    </div>
-    <div class="sr-only">A diverse group of children sitting in a circle listening to a presenter</div>
-</section>
+        <section id="booking-hero" class="container-fluid g-0">
+            <div class="row g-0">
+                <div class="col-12 p-0">
+                    <div id="cover-text" class="container text-center" data-aos="fade-up">
+                        <h1 class="display-3 fw-bold mb-4">Book a <span class="gradient-text">Diversity Talk</span></h1>
+                        <p class="lead mb-5 fs-3"><strong>Bring our interactive diversity and inclusion program to your
+                                school or organization.</strong></p>
+                    </div>
+                    <div class="sr-only">A diverse group of children sitting in a circle listening to a presenter</div>
+                </div>
+            </div>
+        </section>
 
         <!-- Booking Form Section -->
         <section id="booking-form" class="py-5">
@@ -100,14 +105,17 @@
                     <div class="resource-section col-lg-8" data-aos="fade-up">
                         <div class="inner-container p-4 p-md-5">
                             <h2 class="text-center mb-4">Request a Session</h2>
-                            <p class="text-center mb-5">Fill out the form below to book one of our ambassadors for a diversity and inclusion session. We'll get back to you within 2 business days to confirm your booking.</p>
-                            
+                            <p class="text-center mb-5">Fill out the form below to book one of our ambassadors for a
+                                diversity and inclusion session. We'll get back to you within 2 business days to confirm
+                                your booking.</p>
+
                             <form id="bookingForm" action="booking-success.html" method="GET">
                                 <div class="row g-3">
                                     <!-- Personal Information -->
                                     <div class="col-md-6">
                                         <label for="firstName" class="form-label">First Name *</label>
-                                        <input type="text" class="form-control" id="firstName" name="firstName" required>
+                                        <input type="text" class="form-control" id="firstName" name="firstName"
+                                            required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="lastName" class="form-label">Last Name *</label>
@@ -121,18 +129,20 @@
                                         <label for="phone" class="form-label">Phone Number</label>
                                         <input type="tel" class="form-control" id="phone" name="phone">
                                     </div>
-                                    
+
                                     <!-- Organization Information -->
                                     <div class="col-12">
                                         <label for="organization" class="form-label">Organization/School Name *</label>
-                                        <input type="text" class="form-control" id="organization" name="organization" required>
+                                        <input type="text" class="form-control" id="organization" name="organization"
+                                            required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="position" class="form-label">Your Position/Role *</label>
                                         <input type="text" class="form-control" id="position" name="position" required>
                                     </div>
                                     <div class="col-md-6">
-                                        <label for="attendees" class="form-label">Approximate Number of Children *</label>
+                                        <label for="attendees" class="form-label">Approximate Number of Children
+                                            *</label>
                                         <select class="form-select" id="attendees" name="attendees" required>
                                             <option value="" selected disabled>Select range</option>
                                             <option value="1-20">1-20</option>
@@ -142,7 +152,7 @@
                                             <option value="200+">200+</option>
                                         </select>
                                     </div>
-                                    
+
                                     <!-- Session Details -->
                                     <div class="col-md-6">
                                         <label for="sessionType" class="form-label">Session Type *</label>
@@ -167,17 +177,20 @@
                                     </div>
                                     <div class="col-md-6">
                                         <label for="preferredDate" class="form-label">Preferred Date *</label>
-                                        <input type="date" class="form-control" id="preferredDate" name="preferredDate" required>
+                                        <input type="date" class="form-control" id="preferredDate" name="preferredDate"
+                                            required>
                                     </div>
                                     <div class="col-md-6">
                                         <label for="alternateDate" class="form-label">Alternate Date</label>
                                         <input type="date" class="form-control" id="alternateDate" name="alternateDate">
                                     </div>
-                                    
+
                                     <!-- Additional Information -->
                                     <div class="col-12">
-                                        <label for="specialRequirements" class="form-label">Special Requirements or Topics of Interest</label>
-                                        <textarea class="form-control" id="specialRequirements" name="specialRequirements" rows="3"></textarea>
+                                        <label for="specialRequirements" class="form-label">Special Requirements or
+                                            Topics of Interest</label>
+                                        <textarea class="form-control" id="specialRequirements"
+                                            name="specialRequirements" rows="3"></textarea>
                                     </div>
                                     <div class="col-12">
                                         <label for="howHeard" class="form-label">How did you hear about us?</label>
@@ -190,20 +203,25 @@
                                             <option value="other">Other</option>
                                         </select>
                                     </div>
-                                    
+
                                     <!-- Consent -->
                                     <div class="col-12">
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" id="consent" name="consent" required>
+                                            <input class="form-check-input" type="checkbox" id="consent" name="consent"
+                                                required>
                                             <label class="form-check-label" for="consent">
-                                                I agree to the <a href="#" data-bs-toggle="modal" data-bs-target="#privacyModal">privacy policy</a> and understand that Bright Futures will contact me regarding this booking request. *
+                                                I agree to the <a href="#" data-bs-toggle="modal"
+                                                    data-bs-target="#privacyModal">privacy policy</a> and understand
+                                                that Bright Futures will contact me regarding this booking request. *
                                             </label>
                                         </div>
                                     </div>
-                                    
+
                                     <!-- Submit Button -->
                                     <div class="col-12 text-center mt-4">
-                                        <button type="submit" class="btn btn-primary btn-lg px-5 py-3 fw-bold btn-3d">Submit Booking Request</button>
+                                        <button type="submit"
+                                            class="btn btn-primary btn-lg px-5 py-3 fw-bold btn-3d">Submit Booking
+                                            Request</button>
                                     </div>
                                 </div>
                             </form>
@@ -218,9 +236,10 @@
             <div class="container bg-secondary bg-opacity-10 glass-card p-3">
                 <div class="text-center mb-5" data-aos="fade-up">
                     <h2 class="section-title">What to Expect</h2>
-                    <p class="lead">Our interactive sessions are designed to engage young minds with age-appropriate content.</p>
+                    <p class="lead">Our interactive sessions are designed to engage young minds with age-appropriate
+                        content.</p>
                 </div>
-                
+
                 <div class="row g-4">
                     <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                         <div class="card border-0 shadow-sm h-100">
@@ -229,11 +248,12 @@
                                     <i class="fas fa-book-open text-primary fs-3"></i>
                                 </div>
                                 <h3 class="h5">Interactive Storytelling</h3>
-                                <p>Engaging stories that celebrate diversity and promote inclusion, followed by guided discussions.</p>
+                                <p>Engaging stories that celebrate diversity and promote inclusion, followed by guided
+                                    discussions.</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                         <div class="card border-0 shadow-sm h-100">
                             <div class="card-body text-center p-4">
@@ -241,11 +261,12 @@
                                     <i class="fas fa-gamepad text-success fs-3"></i>
                                 </div>
                                 <h3 class="h5">Fun Activities</h3>
-                                <p>Games and exercises that help children understand and appreciate differences in a playful way.</p>
+                                <p>Games and exercises that help children understand and appreciate differences in a
+                                    playful way.</p>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                         <div class="card border-0 shadow-sm h-100">
                             <div class="card-body text-center p-4">
@@ -253,7 +274,8 @@
                                     <i class="fas fa-hands-helping text-warning fs-3"></i>
                                 </div>
                                 <h3 class="h5">Take-home Resources</h3>
-                                <p>Printable materials and book recommendations to continue the conversation at home or in class.</p>
+                                <p>Printable materials and book recommendations to continue the conversation at home or
+                                    in class.</p>
                             </div>
                         </div>
                     </div>
@@ -268,7 +290,7 @@
                     <h2 class="section-title">Our Pricing</h2>
                     <p class="lead">Affordable options for schools and organizations of all sizes</p>
                 </div>
-                
+
                 <div class="row justify-content-center">
                     <div class="col-lg-10">
                         <div class="table-responsive" data-aos="fade-up" data-aos-delay="100">
@@ -309,10 +331,11 @@
                                 </tbody>
                             </table>
                         </div>
-                        
+
                         <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="200">
                             <p class="lead">Discounts available for multiple bookings and non-profit organizations.</p>
-                            <p>Don't see what you need? <a href="booking.html#contact">Contact us</a> to discuss custom options.</p>
+                            <p>Don't see what you need? <a href="booking.html#contact">Contact us</a> to discuss custom
+                                options.</p>
                         </div>
                     </div>
                 </div>
@@ -325,66 +348,87 @@
                 <div class="text-center mb-5" data-aos="fade-up">
                     <h2 class="section-title">Frequently Asked Questions</h2>
                 </div>
-                
+
                 <div class="row justify-content-center">
                     <div class="col-lg-8">
                         <div class="accordion" id="faqAccordion" data-aos="fade-up" data-aos-delay="100">
                             <!-- FAQ Item 1 -->
                             <div class="accordion-item border-0 mb-3 shadow-sm">
                                 <h3 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
                                         How far in advance should I book a session?
                                     </button>
                                 </h3>
-                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                    data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
-                                        We recommend booking at least 4-6 weeks in advance to ensure ambassador availability, especially during peak times like Diversity Week or Black History Month. Last-minute bookings may be possible depending on availability.
+                                        We recommend booking at least 4-6 weeks in advance to ensure ambassador
+                                        availability, especially during peak times like Diversity Week or Black History
+                                        Month. Last-minute bookings may be possible depending on availability.
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- FAQ Item 2 -->
                             <div class="accordion-item border-0 mb-3 shadow-sm">
                                 <h3 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
                                         What space requirements do you have?
                                     </button>
                                 </h3>
-                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
-                                        For classroom sessions, we need a standard classroom setup with space for children to sit in a circle. Assemblies require a hall or large space with audio-visual capabilities. We'll bring all necessary materials and can adapt to your space with advance notice.
+                                        For classroom sessions, we need a standard classroom setup with space for
+                                        children to sit in a circle. Assemblies require a hall or large space with
+                                        audio-visual capabilities. We'll bring all necessary materials and can adapt to
+                                        your space with advance notice.
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- FAQ Item 3 -->
                             <div class="accordion-item border-0 mb-3 shadow-sm">
                                 <h3 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseThree" aria-expanded="false"
+                                        aria-controls="collapseThree">
                                         Can you accommodate children with special needs?
                                     </button>
                                 </h3>
-                                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
-                                        Absolutely! Our ambassadors are trained to work with children of all abilities. Please let us know about any specific needs when booking so we can prepare appropriate materials and adapt our approach. We can provide visual schedules, sensory-friendly versions of activities, or other accommodations as needed.
+                                        Absolutely! Our ambassadors are trained to work with children of all abilities.
+                                        Please let us know about any specific needs when booking so we can prepare
+                                        appropriate materials and adapt our approach. We can provide visual schedules,
+                                        sensory-friendly versions of activities, or other accommodations as needed.
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- FAQ Item 4 -->
                             <div class="accordion-item border-0 mb-3 shadow-sm">
                                 <h3 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseFour" aria-expanded="false"
+                                        aria-controls="collapseFour">
                                         Do you offer virtual sessions?
                                     </button>
                                 </h3>
-                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                                    data-bs-parent="#faqAccordion">
                                     <div class="accordion-body">
-                                        Yes, we offer live virtual sessions via Zoom or Microsoft Teams. These are interactive and include many of the same elements as our in-person visits, adapted for the online format. Virtual sessions are priced at 75% of our standard rates.
+                                        Yes, we offer live virtual sessions via Zoom or Microsoft Teams. These are
+                                        interactive and include many of the same elements as our in-person visits,
+                                        adapted for the online format. Virtual sessions are priced at 75% of our
+                                        standard rates.
                                     </div>
                                 </div>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -456,16 +500,21 @@
                 </div>
                 <div class="modal-body">
                     <h6>Information We Collect</h6>
-                    <p>We collect personal information you provide when booking a session, including your name, contact details, organization information, and session preferences.</p>
-                    
+                    <p>We collect personal information you provide when booking a session, including your name, contact
+                        details, organization information, and session preferences.</p>
+
                     <h6>How We Use Your Information</h6>
-                    <p>Your information is used to process your booking request, communicate with you about your session, and improve our services. We may also use anonymized data for reporting and evaluation purposes.</p>
-                    
+                    <p>Your information is used to process your booking request, communicate with you about your
+                        session, and improve our services. We may also use anonymized data for reporting and evaluation
+                        purposes.</p>
+
                     <h6>Data Protection</h6>
-                    <p>We implement appropriate security measures to protect your personal information. Your data will not be shared with third parties without your consent, except as required by law.</p>
-                    
+                    <p>We implement appropriate security measures to protect your personal information. Your data will
+                        not be shared with third parties without your consent, except as required by law.</p>
+
                     <h6>Your Rights</h6>
-                    <p>You have the right to access, correct, or request deletion of your personal data. Contact us at privacy@brightfutures.world for any data-related requests.</p>
+                    <p>You have the right to access, correct, or request deletion of your personal data. Contact us at
+                        privacy@brightfutures.world for any data-related requests.</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">I Understand</button>
@@ -482,18 +531,18 @@
 
     <!-- Custom JS -->
     <script src="assets/js/script.js"></script>
-    
+
     <!-- Booking Form Validation -->
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const bookingForm = document.getElementById('bookingForm');
-            
+
             if (bookingForm) {
-                bookingForm.addEventListener('submit', function(e) {
+                bookingForm.addEventListener('submit', function (e) {
                     // Simple client-side validation
                     const requiredFields = bookingForm.querySelectorAll('[required]');
                     let isValid = true;
-                    
+
                     requiredFields.forEach(field => {
                         if (!field.value.trim()) {
                             isValid = false;
@@ -502,17 +551,17 @@
                             field.classList.remove('is-invalid');
                         }
                     });
-                    
+
                     if (!isValid) {
                         e.preventDefault();
                         alert('Please fill in all required fields marked with *.');
                     }
-                    
+
                     // In a real implementation, you would also validate the form server-side
                     // and potentially send the data via AJAX to your backend
                 });
             }
-            
+
             // Initialize AOS
             AOS.init({
                 duration: 800,
@@ -523,4 +572,5 @@
         });
     </script>
 </body>
+
 </html>
