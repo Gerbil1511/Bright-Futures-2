@@ -5,7 +5,8 @@
     --red: #f18b80;
     --dark: #1A1A2E;
     --light: #F8F9FA;
-    --gradient: linear-gradient(45deg,rgba(128, 198, 241, 0.6), rgba(241, 222, 128, 0.6),rgba(241, 139, 128, 0.6)) rgba(128, 198, 241, 0.6);;
+    --gradient: linear-gradient(45deg, #277DA1, #43AA8B, #F9C74F, #F94144); 
+    
 }
 
 /* Base Styles */
@@ -18,7 +19,6 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-
     font-weight: 600;
 }
 
@@ -64,42 +64,43 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 #hero {
-    height: 100vh;
-    min-height: 600px;
-    background: var(--gradient);
     position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-}
-
-#hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
-    background: url('../images/inclusive-play.webp') center/cover;
-    opacity: 0.9;
+    min-height: 75vh; /* Adjust this based on preference */
+    background: url('../images/inclusive-play.webp') no-repeat center center;
+    background-size: cover; /* Ensures image scales properly */
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    padding: 5vw; /* Ensures spacing around text */
 }
 
 #cover-text {
-    max-width: 800px;
-    background: var(--gradient);
     position: relative;
-    padding: 20px;
     z-index: 2;
+    max-width: 80%;
+    background: rgba(244, 237, 198, 0.6); /* Semi-opaque white background */
+    padding: 20px;
+    border-radius: 10px;
     color: var(--dark);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
 }
 
-/* Animated Gradient Text */
-/* .gradient-text {
+.gradient-text {
+    font-size: 4.5rem; /* Adjust font size as needed */
+    font-weight: bold;
+    color: transparent; /* Make the text itself transparent */
+    -webkit-text-stroke: 3px var(--dark); 
+    text-stroke: 3px var(--dark); /* Fallback for non-webkit browsers */
     background: var(--gradient);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-} */
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    background-clip: text; /* Standard background clip */
+    -webkit-text-fill-color: transparent; /* Ensure the gradient fills the text */
+    text-fill-color: transparent; /* Fallback for non-webkit browsers */
+
+}
 
 /* 3D Button Effect */
 .btn-3d {
@@ -129,27 +130,6 @@ h1, h2, h3, h4, h5, h6 {
     box-shadow: 0 20px 40px rgba(0,0,0,0.1);
 }
 
-/* Custom Shapes */
-.custom-shape-divider {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.custom-shape-divider svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 100px;
-}
-
-.custom-shape-divider .shape-fill {
-    fill: var(--light);
-}
-
 /* Section Styling */
 section {
     padding: 100px 0;
@@ -157,23 +137,48 @@ section {
 }
 
 .section-title {
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
-    text-align: center;
-    position: relative;
-    display: inline-block;
+    font-size: 2.5rem; /* Large font size for prominence */
+    margin-bottom: 3rem; /* Space below the title */
+    text-align: center; /* Center the text */
+    position: relative; /* For positioning the underline */
+    display: inline-block; /* Ensures the title is treated as a block */
+    background: var(--gradient); /* Apply gradient to the text */
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    -webkit-text-fill-color: transparent; /* Make the text transparent to show the gradient */
+    text-fill-color: transparent; /* Fallback for non-webkit browsers */
+    font-weight: bold; /* Make the title bold */
 }
 
 .section-title::after {
     content: '';
     position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
+    bottom: -5px; /* Position the underline just below the text */
+    left: 50%; /* Center the underline */
+    transform: translateX(-50%); /* Adjust for centering */
+    width: 0; /* Start with no width for animation */
+    height: 3px; /* Thickness of the underline */
+    background: var(--gradient); /* Use the same gradient as the text */
+    transition: width 0.3s ease; /* Smooth animation for the underline */
+    border-radius: 2px; /* Rounded edges for the underline */
+}
+
+.section-title:hover::after {
+    width: 100%; /* Expand the underline on hover */
+}
+
+/* Gradient Border for Resource Sections */
+.resource-section {
+    position: relative;
+    padding: 20px; /* Space inside the border */
     background: var(--gradient);
-    border-radius: 2px;
+    border-radius: 10px; /* Rounded corners for the border */
+}
+
+.resource-section > .inner-container {
+    background: white; 
+    padding: 20px; 
+    border-radius: 8px; /* Match the border radius */
+    background-clip: padding-box; /* Ensures the inner background doesn't overlap the border */
 }
 
 /* Mission Section */
@@ -222,6 +227,12 @@ section {
     align-self: flex-start;
 }
 
+.icon-wrapper{
+    width: 60px;
+    height: 60px;
+}
+
+
 /* Carousel */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
@@ -239,52 +250,52 @@ section {
     transform: translateY(-2px);
 }
 
-/* Videos */
-/* Video Play Button Styles */
-.video-play-button {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 60px;
-    height: 60px;
-    background-color: rgba(255,255,255,0.8);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    z-index: 10;
-}
-
-.video-play-button i {
-    color: var(--green);
-    font-size: 24px;
-    margin-left: 5px;
-}
-
-.video-play-button:hover {
-    background-color: white;
-    transform: translate(-50%, -50%) scale(1.1);
-}
-
-.card:hover .video-play-button {
-    opacity: 1;
-}
-
-/* Hide play button when video is playing */
-.ratio.playing .video-play-button {
-    display: none;
-}
 .ratio-16x9 {
     border-radius: 12px 12px 0 0;
     overflow: hidden;
 }
 
+/* CTA Section */
+.cta-section {
+    position: relative;
+    overflow: hidden; /* Ensures the animation stays within the section */
+    background: var(--gradient); /* Fallback gradient */
+    color: var(--dark);
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite; /* Same animation as the mission section */
+    z-index: 1; /* Ensure it stays behind the content */
+}
+
+.cta-section .container {
+    position: relative;
+    z-index: 2; /* Ensure content is above the animation */
+}
+
+/* Booking page */
+#booking-hero {
+    position: relative;
+    width: 100%;
+    min-height: 75vh;
+    background: url('../images/storytime.webp') no-repeat center 35%; 
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 5vw;
+}
+
 /* Footer */
 footer {
-    background: var(--dark);
     position: relative;
 }
 
@@ -308,7 +319,7 @@ footer::before {
     height: 40px;
     border-radius: 50%;
     background: rgba(255,255,255,0.1);
-    color: white;
+    color: var(--dark);
     transition: all 0.3s ease;
 }
 
@@ -330,6 +341,22 @@ footer::before {
 }
 
 @media (max-width: 768px) {
+    #hero {
+        min-height: 60vh; /* Reduce height on smaller screens */
+        padding: 10vw;
+    }
+
+    #cover-text {
+        max-width: 90%; /* Allow a little more width */
+    }
+
+    #cover-text h1 {
+        font-size: 2rem; /* Reduce font size */
+    }
+
+    .lead {
+        font-size: 1.2rem; /* Reduce paragraph size */
+    }
     section {
         padding: 60px 0;
     }
@@ -337,39 +364,34 @@ footer::before {
     .section-title {
         font-size: 2rem;
     }
-    
-    #hero {
-        min-height: 500px;
-    }
-    
-    #cover-text h1 {
-        font-size: 2.5rem;
-    }
-    
-    #cover-text p {
-        font-size: 1.25rem;
-    }
 }
 
 @media (max-width: 576px) {
-    .section-title {
-        font-size: 1.8rem;
-    }
     
     #hero {
-        min-height: 400px;
+        min-height: 50vh; /* Reduce height to fit small screens */
+        padding: 8vw 5vw; /* Adjust padding for better spacing */
     }
-    
+
+    #cover-text {
+        max-width: 95%; /* Allow more space for text */
+    }
+
     #cover-text h1 {
-        font-size: 2rem;
+        font-size: 1.8rem; /* Make heading smaller */
+        line-height: 1.2; /* Improve readability */
     }
-    
-    #cover-text p {
-        font-size: 1rem;
+
+    .lead {
+        font-size: 1rem; /* Reduce paragraph size */
     }
-    
+
     .btn-lg {
-        padding: 0.5rem 1rem;
-        font-size: 1rem;
+        font-size: 0.9rem; /* Slightly smaller button */
+        padding: 12px 20px; /* Adjust button padding */
+    }
+
+    .section-title {
+        font-size: 1.8rem;
     }
 }
