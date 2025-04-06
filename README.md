@@ -1,7 +1,7 @@
 # Bright Futures
 
 <p align="center">
-  <img src="./assets/Bright-Futures.png" alt="Bright Futures - Responsive devices image">
+  <img src="./assets/images/Bright-Futures.png" alt="Bright Futures - Responsive devices image">
 </p>
 
 <p align="center">
