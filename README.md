@@ -1,4 +1,4 @@
-# Bright Futures
+# Bright Futures 2
 
 <p align="center">
   <img src="./assets/images/Bright-Futures.png" alt="Bright Futures - Responsive devices image">
