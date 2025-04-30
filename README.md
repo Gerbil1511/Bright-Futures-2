@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-| <a href="https://gerbil1511.github.io/Bright-Futures-2/index.html" target="_blank">Live Project</a> |
+| <a href="https://geraldine-edwards.github.io/Bright-Futures-2/" target="_blank">Live Project</a> |
 </p>
 
 ## Introduction 
